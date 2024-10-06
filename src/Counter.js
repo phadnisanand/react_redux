@@ -2,6 +2,7 @@ import React from 'react';
 import { RootState } from './redux/Store';
 import { useSelector, useDispatch } from 'react-redux';
 import { decrement, increment } from './redux/counterSlice';
+import AnotherCounter from './AnotherCounter';
 
 export function Counter() {
   const count = useSelector((state: RootState) => state.counter.value)
@@ -24,6 +25,8 @@ export function Counter() {
           Decrement
         </button>
       </div>
+
+      <AnotherCounter />
     </div>
   )
 }
